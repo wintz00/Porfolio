@@ -1,17 +1,21 @@
 const revealElements = document.querySelectorAll('.reveal');
 
-const revealOnScroll = () => {
-  revealElements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
+const revealObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // stop watching once revealed
+      }
+    });
+  },
+  { threshold: 0.15, rootMargin: '0px 0px -80px 0px' }
+);
 
-    if (elementTop < windowHeight - 80) {
-      element.classList.add('visible');
-    }
-  });
-};
+revealElements.forEach((element) => revealObserver.observe(element));
 
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
-
-document.getElementById('year').textContent = new Date().getFullYear();
+// Footer year
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
