@@ -5,7 +5,7 @@ const revealObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // stop watching once revealed
+        observer.unobserve(entry.target);
       }
     });
   },
@@ -14,7 +14,39 @@ const revealObserver = new IntersectionObserver(
 
 revealElements.forEach((element) => revealObserver.observe(element));
 
-// Footer year
+const body = document.body;
+const themeToggle = document.querySelector('.theme-toggle');
+const themeIcon = document.querySelector('.theme-icon');
+const themeLabel = document.querySelector('.theme-label');
+
+function applyTheme(theme) {
+  const isLight = theme === 'light';
+  body.setAttribute('data-theme', theme);
+
+  if (themeToggle) {
+    themeToggle.setAttribute('aria-pressed', String(isLight));
+  }
+
+  if (themeIcon) {
+    themeIcon.textContent = isLight ? '☀️' : '🌙';
+  }
+
+  if (themeLabel) {
+    themeLabel.textContent = isLight ? 'Light' : 'Dark';
+  }
+}
+
+const savedTheme = localStorage.getItem('theme') || 'dark';
+applyTheme(savedTheme);
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    localStorage.setItem('theme', nextTheme);
+    applyTheme(nextTheme);
+  });
+}
+
 const yearEl = document.getElementById('year');
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();

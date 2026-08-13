@@ -21,12 +21,18 @@
       <div class="container">
         <a class="brand" href="#home">
             <img src="Image/IconOnly_Transparent_NoBuffer (1).png" alt="Brand Logo" /></a>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-          <a href="resume.pdf" download>Resume</a>
+        <div class="nav-actions">
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="resume.pdf" download>Resume</a>
+          </div>
+          <button class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+            <span class="theme-label">Dark</span>
+          </button>
         </div>
       </div>
     </nav>
@@ -74,26 +80,79 @@ I’m currently beginning my professional journey as a Project Control Services 
       <section id="skills">
         <div class="container reveal">
           <h2 class="section-title">Skills</h2>
-          <div class="grid-3">
-            <div class="item reveal">
-              <h3>Data Analytics</h3>
-              <p class="muted">Power BI, Power Query, DAX, Excel</p>
+
+          <div class="skills-grid single-icons">
+            <div class="skill-card reveal" aria-label="Power BI icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/powerbi.svg" alt="Power BI" />
             </div>
-            <div class="item reveal">
-              <h3>Automation</h3>
-              <p class="muted">Power Automate</p>
+            <div class="skill-card reveal" aria-label="Power Query icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftpowerautomate.svg" alt="Power Query" />
             </div>
-            <div class="item reveal">
-              <h3>Development</h3>
-              <p class="muted">HTML, CSS, JavaScript, PHP, Laravel, Vue.js</p>
+            <div class="skill-card reveal" aria-label="DAX icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoft.svg" alt="DAX" />
             </div>
-            <div class="item reveal">
-              <h3>Infrastructure</h3>
-              <p class="muted">Networking Basics, Linux Ubuntu</p>
+            <div class="skill-card reveal" aria-label="Excel icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftexcel.svg" alt="Excel" />
             </div>
-            <div class="item reveal">
-              <h3>Graphic Design</h3>
-              <p class="muted">Photoshop, Canva, Figma</p>
+            <div class="skill-card reveal" aria-label="Power Automate icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftpowerautomate.svg" alt="Power Automate" />
+            </div>
+            <div class="skill-card reveal" aria-label="GitHub icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub" />
+            </div>
+            <div class="skill-card reveal" aria-label="Jira icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/jira.svg" alt="Jira" />
+            </div>
+            <div class="skill-card reveal" aria-label="VMware icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vmware.svg" alt="VMware" />
+            </div>
+            <div class="skill-card reveal" aria-label="Visual Studio icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/visualstudio.svg" alt="Visual Studio" />
+            </div>
+            <div class="skill-card reveal" aria-label="Microsoft Teams icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftteams.svg" alt="Microsoft Teams" />
+            </div>
+            <div class="skill-card reveal" aria-label="Python icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg" alt="Python" />
+            </div>
+            <div class="skill-card reveal" aria-label="C Sharp icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/csharp.svg" alt="C#" />
+            </div>
+            <div class="skill-card reveal" aria-label="Cisco Packet Tracer icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/cisco.svg" alt="Cisco Packet Tracer" />
+            </div>
+            <div class="skill-card reveal" aria-label="SQL icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mysql.svg" alt="SQL" />
+            </div>
+            <div class="skill-card reveal" aria-label="HTML5 icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/html5.svg" alt="HTML5" />
+            </div>
+            <div class="skill-card reveal" aria-label="CSS3 icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/css3.svg" alt="CSS3" />
+            </div>
+            <div class="skill-card reveal" aria-label="JavaScript icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/javascript.svg" alt="JavaScript" />
+            </div>
+            <div class="skill-card reveal" aria-label="PHP icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/php.svg" alt="PHP" />
+            </div>
+            <div class="skill-card reveal" aria-label="Laravel icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/laravel.svg" alt="Laravel" />
+            </div>
+            <div class="skill-card reveal" aria-label="Vue.js icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vuedotjs.svg" alt="Vue.js" />
+            </div>
+            <div class="skill-card reveal" aria-label="Linux icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linux.svg" alt="Linux" />
+            </div>
+            <div class="skill-card reveal" aria-label="Figma icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/figma.svg" alt="Figma" />
+            </div>
+            <div class="skill-card reveal" aria-label="Photoshop icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/adobephotoshop.svg" alt="Photoshop" />
+            </div>
+            <div class="skill-card reveal" aria-label="Canva icon">
+              <img class="skill-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/canva.svg" alt="Canva" />
             </div>
           </div>
         </div>
